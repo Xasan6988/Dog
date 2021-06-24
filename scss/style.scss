@@ -250,3 +250,123 @@
   padding: 12px 30px;
   cursor: pointer;
 }
+
+.care-region {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.care-image {
+  margin-right: 15px;
+}
+
+.care-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #E27B3A;
+  opacity: 0.8;
+}
+
+.care-subtitle {
+  font-family: 'Poppins';
+  // min-width: 487px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32.25px;
+  line-height: 45px;
+  color: #170C04;
+}
+
+.care-description {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #170C04;
+  opacity: 0.6;
+}
+
+.btn-primary.btn-fill:hover {
+  background-color: #fff;
+  color: #E27B3A;
+  transition: all 1.5s;
+}
+
+.btn-primary:hover {
+  background-color: #E27B3A;
+  transition: all 1.5s;
+  color: #fff;
+}
+
+.subscribe-region {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+
+.subscribe-title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32.25px;
+  line-height: 45px;
+  text-align: center;
+  color: #170C04;
+  max-width: 505px;
+  margin: auto;
+  margin-bottom: 36px;
+}
+
+.sub-card-group {
+  display: flex;
+  margin-bottom: 45px
+}
+
+.sub-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+}
+.sub-card-title {
+  margin-top: 50px;
+  margin-bottom: 22px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #170C04;
+}
+
+.sub-card-description {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #170C04;
+  opacity: 0.6;
+}
+
+.sub-card-link {
+  margin-top: 15px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #E27B3A;
+  text-decoration: none;
+}
