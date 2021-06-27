@@ -412,6 +412,12 @@
 }
 .gallery-item {
   margin-bottom: 30px;
+  cursor: pointer;
+  &:hover {
+    // border: 1px solid #F4E7E6;
+    // border-radius: 15px;
+    box-shadow: 1px 2px 3px 4px #F4E7E6;
+  }
 }
 
 .output {
@@ -558,7 +564,7 @@
 }
 
 .contact-region {
-  margin-bottom: 70px;
+  margin-bottom: 130px;
   background: url('../img/contactBg.jpg') no-repeat;
   height: 350px;
   display: flex;
@@ -652,8 +658,134 @@
   border-top-left-radius: 0px;
   margin-left: -70px;
   transition: background-color 1s;
+  cursor: pointer;
   &:hover {
     background-color: darken(#e27b3a, 10%);
     transition: all 1s;
   }
+}
+
+.footer {
+  background: black;
+  height: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.container-footer {
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.footer-col {
+  flex-basis: 33%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+
+}
+
+.footer-left-list {
+  list-style: none;
+  margin-top: 100px;
+}
+.footer-left-list-item,
+.footer-right-list-item {
+  color: #000;
+  margin-bottom: 37px;
+
+}
+
+.footer-list-link {
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.footer-right-list {
+  text-align: right;
+  list-style: none;
+  margin-top: 100px;
+}
+
+.footer-title {
+  color: #fff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.network-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 50px;
+}
+
+.footer-left-list-item-desc {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.col-with-logo {
+  height: 260px;
+}
+
+.footer-logo {
+  width: 48px;
+  height: 51px;
+  margin-bottom: 12px;
+}
+
+.fa-facebook-f,
+.fa-linkedin-in,
+.fa-twitter {
+  font-size: 22px;
+  color: #000;
+  background-color: #DFDFDF;
+  border-radius: 50%;
+  padding: 11px;
+  &:hover {
+    color: #fff;
+    background-color: darken(#DFDFDF, 50%);
+  }
+}
+
+.fa-facebook-f,
+.fa-linkedin-in {
+  margin-right: 15px;
+}
+
+.fa-facebook-f {
+  padding: 10px 13px;
+  padding-right: 15px;
+}
+.fa-linkedin-in {
+  padding: 11px 13px;
+}
+
+.email {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #E27B3A;
+  opacity: 0.8;
 }
