@@ -556,3 +556,104 @@
 .arrow:hover {
   color: #000;
 }
+
+.contact-region {
+  margin-bottom: 70px;
+  background: url('../img/contactBg.jpg') no-repeat;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 70px;
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 31.25px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  max-width: 423px;
+}
+
+.contactr-description {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  opacity: 0.7;
+  max-width: 423px;
+}
+.form {
+  display: flex;
+}
+.email-inp {
+  padding: 20px 20px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #170C04;
+  &:focus::-webkit-input-placeholder {
+    color: transparent
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent
+  }
+  &::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 41px;
+    color: #170C04;
+    opacity: 0.4;
+  }
+}
+
+.submit {
+  background-color: #E27B3A;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 16px 37px;
+  border-radius: 10px;
+  border: none;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  margin-left: -70px;
+  transition: background-color 1s;
+  &:hover {
+    background-color: darken(#e27b3a, 10%);
+    transition: all 1s;
+  }
+}
