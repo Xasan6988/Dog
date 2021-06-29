@@ -565,7 +565,7 @@
 
 .contact-region {
   margin-bottom: 130px;
-  background: url('../img/contactBg.jpg') no-repeat;
+  background: url('../img/contactBg.jpg') center  no-repeat;
   height: 350px;
   display: flex;
   align-items: center;
@@ -805,7 +805,10 @@
 
 @media (max-width: 780px) {
   .nav-list {
-    display: none;
+    margin: 30px;
+    .nav-list-link {
+      font-size: 24px;
+    }
   }
   .header {
     flex-direction: column;
