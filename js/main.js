@@ -3,8 +3,29 @@ const galleryOutput = document.querySelector('.show-item');
 const testimonialCards = document.querySelectorAll('.cards');
 const upBtn = document.querySelector('#arrow-up');
 const downBtn = document.querySelector('#arrow-down');
+const form = document.querySelector('.form');
 
 let count = 0;
+
+
+const showThanks = () => {
+	alert('Your message has been sent! We will contact you shortly')
+};
+
+
+const sendForm = (data, cb) => {
+	fetch('http://jsonplaceholder.typicode.com/posts', {
+		method: 'POST',
+		headers: {
+			'content-type': 'application/json; charset=UTF-8',
+		},
+		body: JSON.stringify(data),
+	})
+	.then(response => response.json())
+	.then(cb);
+};
+
+
 
 const slideUp = () => {
 	if (count > 2) {
@@ -61,3 +82,19 @@ for (let elem of galleryItem) {
 		});
 	}
 })()
+
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+
+	const formData = new FormData(form);
+	const data = {};
+
+	for (let {name, value} of formData) {
+		data[name] = value;
+	}
+
+	sendForm(data, showThanks);
+
+	form.reset();
+})
