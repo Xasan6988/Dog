@@ -467,6 +467,18 @@
   display: none !important;
 }
 
+.oldSlideDownAnim {
+  margin-top: -70px;
+  opacity: 0;
+  transition: margin-top 2s,  opacity 1.5s;
+}
+
+.oldSlideUpAnim {
+  margin-top: 70px;
+  opacity: 0;
+  transition: margin-top 2s, opacity 1.5s;
+}
+
 .cards {
   width: 555px;
   height: 272px;
@@ -485,6 +497,8 @@
 
 .testimonial-avatar {
   border-radius: 50%;
+  width: 30px;
+  height: 30px;
   margin-top: 30px;
   margin-bottom: 20px;
 }

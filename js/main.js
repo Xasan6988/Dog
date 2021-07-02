@@ -32,11 +32,21 @@ const slideUp = () => {
 		count = 0;
 	}
 	console.log(count);
-	testimonialCards[count].classList.add('hide');
+	testimonialCards[count].classList.add('oldSlideDownAnim')
+	setTimeout(() => {
+		console.log('timeout');
+		testimonialCards[count - 1].classList.remove('oldSlideDownAnim');
+		testimonialCards[count - 1].classList.add('hide');
+	}, 400)
 	if (count === 2) {
-		testimonialCards[0].classList.remove('hide');
+		setTimeout(() => {
+			console.log('timeout');
+			testimonialCards[2].classList.remove('oldSlideDownAnim');
+			testimonialCards[2].classList.add('hide');
+			testimonialCards[0].classList.remove('hide');
+		}, 400)
 	} else {
-		testimonialCards[count + 1].classList.remove('hide');
+		setTimeout(() => testimonialCards[count].classList.remove('hide'), 400)
 	}
 	count++;
 	console.log(count);
@@ -46,17 +56,39 @@ const slideDown =() => {
 	if (count < 0) {
 		count = 2;
 	}
-	testimonialCards[count].classList.add('hide');
+	testimonialCards[count].classList.add('oldSlideUpAnim')
+	setTimeout(() => {
+		testimonialCards[count + 1].classList.remove('oldSlideUpAnim')
+		testimonialCards[count + 1].classList.add('hide');
+	}, 400)
 	if (count === 0) {
-		testimonialCards[2].classList.remove('hide');
+		setTimeout(() => {
+			testimonialCards[0].classList.remove('oldSlideUpAnim')
+			testimonialCards[0].classList.add('hide');
+			testimonialCards[2].classList.remove('hide');
+		}, 400);
 	} else {
-		testimonialCards[count - 1].classList.remove('hide');
+		setTimeout(() => {
+			testimonialCards[count].classList.remove('hide');
+		}, 400);
 	}
 		count--;
 }
 
-upBtn.addEventListener('click', slideDown);
-downBtn.addEventListener('click', slideUp);
+upBtn.addEventListener('click', () => {
+	slideDown();
+	upBtn.disabled = true;
+	setTimeout(() => {
+		upBtn.disabled = false;
+	}, 600);
+});
+downBtn.addEventListener('click', () => {
+	slideUp();
+	downBtn.disabled = true;
+	setTimeout(() => {
+		downBtn.disabled = false;
+	}, 600);
+});
 
 for (let elem of galleryItem) {
   elem.addEventListener('click', () => {
