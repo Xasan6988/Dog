@@ -30,49 +30,53 @@ const sendForm = (data, cb) => {
 const slideUp = () => {
 	if (count > 2) {
 		count = 0;
+	} else if (count < 0) {
+		count = 2;
 	}
-	console.log(count);
 	testimonialCards[count].classList.add('oldSlideDownAnim')
 	setTimeout(() => {
-		console.log('timeout');
-		testimonialCards[count - 1].classList.remove('oldSlideDownAnim');
-		testimonialCards[count - 1].classList.add('hide');
-	}, 400)
+		testimonialCards[count].classList.remove('oldSlideDownAnim');
+		testimonialCards[count].classList.add('hide');
+	}, 450)
 	if (count === 2) {
 		setTimeout(() => {
-			console.log('timeout');
-			testimonialCards[2].classList.remove('oldSlideDownAnim');
-			testimonialCards[2].classList.add('hide');
+			testimonialCards[count].classList.remove('oldSlideDownAnim');
+			testimonialCards[count].classList.add('hide');
 			testimonialCards[0].classList.remove('hide');
-		}, 400)
+		}, 500)
 	} else {
-		setTimeout(() => testimonialCards[count].classList.remove('hide'), 400)
+		setTimeout(() => testimonialCards[count + 1].classList.remove('hide'), 450)
 	}
-	count++;
-	console.log(count);
+	setTimeout(() => {
+		count++;
+	}, 650);
 }
 
-const slideDown =() => {
-	if (count < 0) {
+const slideDown = async () => {
+	if (count < 0  ) {
 		count = 2;
+	} else if (count > 2) {
+		count = 0;
 	}
 	testimonialCards[count].classList.add('oldSlideUpAnim')
 	setTimeout(() => {
-		testimonialCards[count + 1].classList.remove('oldSlideUpAnim')
-		testimonialCards[count + 1].classList.add('hide');
-	}, 400)
+		testimonialCards[count].classList.remove('oldSlideUpAnim')
+		testimonialCards[count].classList.add('hide');
+	}, 450)
 	if (count === 0) {
 		setTimeout(() => {
-			testimonialCards[0].classList.remove('oldSlideUpAnim')
-			testimonialCards[0].classList.add('hide');
+			testimonialCards[count].classList.remove('oldSlideUpAnim')
+			testimonialCards[count].classList.add('hide');
 			testimonialCards[2].classList.remove('hide');
-		}, 400);
+		}, 500);
 	} else {
 		setTimeout(() => {
-			testimonialCards[count].classList.remove('hide');
-		}, 400);
+			testimonialCards[count - 1].classList.remove('hide');
+		}, 450);
 	}
+	setTimeout(() => {
 		count--;
+	}, 650);
 }
 
 upBtn.addEventListener('click', () => {
@@ -80,14 +84,14 @@ upBtn.addEventListener('click', () => {
 	upBtn.disabled = true;
 	setTimeout(() => {
 		upBtn.disabled = false;
-	}, 600);
+	}, 750);
 });
 downBtn.addEventListener('click', () => {
 	slideUp();
 	downBtn.disabled = true;
 	setTimeout(() => {
 		downBtn.disabled = false;
-	}, 600);
+	}, 750);
 });
 
 for (let elem of galleryItem) {
